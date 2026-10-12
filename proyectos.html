@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -14,94 +14,101 @@
     <meta property="og:description" content="Listado de proyectos y desarrollos de Anderson Gutierrez.">
     <meta property="og:type" content="website">
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Misma hoja de estilos compartida -->
+    <link rel="stylesheet" href="style.css">
+
     <title>Proyectos | Cv-Anderson Gutierrez</title>
 </head>
 
 <body>
-    <header>
-        <table width="100%" border="0" cellpadding="10" cellspacing="0">
-            <tr>
-                <td align="left" valign="middle">
-                    <a href="#" style="text-decoration: none; color: black;">
-                        <strong style="font-size: 18px; vertical-align: middle;">Anderson Gutierrez</strong>
-                    </a>
-                </td>
 
-                <td align="right" valign="middle">
-                    <nav>
-                        <a href="index.html">inicio</a> /
-                        <a href="proyectos.html">Projectos</a> /
-                        <a href="articulos.html">Articulos</a> /
-                        <a href="contacto.html">Contacto</a>
-                    </nav>
-                </td>
-            </tr>
-        </table>
+    <!-- Checkbox oculto para el modo oscuro (comparte id y lógica con todo el sitio) -->
+    <input type="checkbox" id="dark-toggle" class="dark-checkbox">
+
+    <!-- HEADER / NAVEGACIÓN UNIFICADA -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <strong>Anderson Gutierrez</strong>
+            </a>
+            
+            <div class="header-right">
+                <nav class="nav-links">
+                    <a href="index.html">inicio</a> /
+                    <a href="proyectos.html" class="active">Proyectos</a> /
+                    <a href="articulos.html">Artículos</a> /
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+
+                <!-- Botón de cambio de tema -->
+                <label for="dark-toggle" class="theme-btn" aria-label="Cambiar modo oscuro"></label>
+            </div>
+        </div>
     </header>
 
+    <!-- CONTENIDO PRINCIPAL -->
     <main>
-        <table width="100%" height="70vh" border="0" cellpadding="0" cellspacing="0">
-            <tr>
-                <td align="center" valign="middle">
-                    <section id="inicio">
-                        <h1>Proyectos</h1>
-                    </section>
-                </td>
-            </tr>
-        </table>
-
-
-        <section>
-            <h1>Proyectos de Mojang Studios</h1>
-            <p>Una selección de los principales videojuegos y plataformas desarrolladas por Mojang Studios dentro del
-                universo de Minecraft.</p>
+        <!-- Sección Hero -->
+        <section class="hero-section">
+            <div class="container">
+                <h1>Proyectos</h1>
+                <p>Proyectos de Mojang Studios</p>
+            </div>
         </section>
 
-        <hr>
+        <div class="container">
+            <hr class="section-divider">
+        </div>
 
-        <!-- Listado de Proyectos -->
-        <section>
+        <!-- Descripción introductoria -->
+        <div class="container intro-project-section">
+            <p>Una selección de los principales videojuegos y plataformas desarrolladas por Mojang Studios dentro del universo de Minecraft.</p>
+        </div>
+
+        <!-- Listado de Proyectos en Grid Responsivo -->
+        <div class="container projects-grid">
 
             <!-- Proyecto 1: Minecraft -->
-            <article>
+            <article class="card-section">
                 <h2>Minecraft (Original)</h2>
                 <p><strong>Tipo:</strong> Videojuego de construcción y supervivencia (Sandbox)</p>
-                <p><strong>Descripción:</strong> El juego insignia de Mojang que permite a los jugadores explorar e
-                    interactuar con un mundo infinito de bloques en 3D. Incluye modos como Supervivencia, Creativo y
-                    Aventura, fomentando la creatividad y la exploración.</p>
-                <p><strong>Tecnologías relativas:</strong> Java, C++ (Bedrock Engine)</p>
-                <a href="https://www.minecraft.net" target="_blank">Visitar sitio oficial</a>
+                <p><strong>Descripción:</strong> El juego insignia de Mojang que permite a los jugadores explorar e interactuar con un mundo infinito de bloques en 3D. Incluye modos como Supervivencia, Creativo y Aventura.</p>
+                <p class="tech-tag"><strong>Tecnologías:</strong> Java, C++ (Bedrock Engine)</p>
+                <a href="https://www.minecraft.net" target="_blank" class="project-link">Visitar sitio oficial →</a>
             </article>
-
-            <hr>
 
             <!-- Proyecto 2: Minecraft Dungeons -->
-            <article>
+            <article class="card-section">
                 <h2>Minecraft Dungeons</h2>
                 <p><strong>Tipo:</strong> Videojuego de acción y mazmorras (Dungeon Crawler)</p>
-                <p><strong>Descripción:</strong> Un spin-off ambientado en el universo de Minecraft inspirado en los
-                    juegos clásicos de mazmorras. Los jugadores exploran niveles llenos de monstruos, recogen tesoros y
-                    enfrentan al malvado Arch-Illager en modo individual o cooperativo.</p>
-                <p><strong>Tecnologías relativas:</strong> Unreal Engine 4</p>
-                <a href="https://www.minecraft.net/dungeons" target="_blank">Visitar sitio oficial</a>
+                <p><strong>Descripción:</strong> Un spin-off ambientado en el universo de Minecraft inspirado en los juegos clásicos de mazmorras. Niveles llenos de monstruos y tesoros.</p>
+                <p class="tech-tag"><strong>Tecnologías:</strong> Unreal Engine 4</p>
+                <a href="https://www.minecraft.net/dungeons" target="_blank" class="project-link">Visitar sitio oficial →</a>
             </article>
-
-            <hr>
 
             <!-- Proyecto 3: Minecraft Education -->
-            <article>
+            <article class="card-section">
                 <h2>Minecraft Education</h2>
                 <p><strong>Tipo:</strong> Plataforma de aprendizaje pedagógico</p>
-                <p><strong>Descripción:</strong> Una versión adaptada especialmente para aulas de clase y entornos
-                    educativos. Ofrece herramientas de enseñanza para profesores, soporte para programación (Blockly,
-                    Python) y lecciones de materias como química, historia y matemáticas.</p>
-                <p><strong>Tecnologías relativas:</strong> C++ (Bedrock Engine), Code Builder</p>
-                <a href="https://education.minecraft.net" target="_blank">Visitar sitio oficial</a>
+                <p><strong>Descripción:</strong> Una versión adaptada especialmente para aulas de clase y entornos educativos. Soporte para programación (Blockly, Python).</p>
+                <p class="tech-tag"><strong>Tecnologías:</strong> C++ (Bedrock Engine), Code Builder</p>
+                <a href="https://education.minecraft.net" target="_blank" class="project-link">Visitar sitio oficial →</a>
             </article>
 
-        </section>
-
+        </div>
     </main>
-</body>
 
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Anderson Gutierrez. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
 </html>
