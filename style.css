@@ -1,4 +1,4 @@
-/* --- VARIABLES POR DEFECTO (MODO CLARO) --- */
+/* VARIABLES POR DEFECTO MODO CLARO */
 :root {
     --bg-color: #ffffff;
     --text-color: #111111;
@@ -9,7 +9,7 @@
     --shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
 }
 
-/* --- MODO OSCURO ACTIVADO MEDIANTE CSS PURO --- */
+/* MODO OSCURO */
 body:has(#dark-toggle:checked) {
     --bg-color: #121212;
     --text-color: #f1f5f9;
@@ -25,7 +25,7 @@ body:has(#dark-toggle:checked) {
     display: none;
 }
 
-/* --- RESET & BOX MODEL --- */
+/*RESET & BOX MODEL*/
 * {
     box-sizing: border-box;
     margin: 0;
@@ -47,7 +47,7 @@ body {
     padding: 0 20px;
 }
 
-/* --- ESTILO DEL BOTÓN DE TEMA (LABEL) --- */
+/* ESTILO DEL BOTÓN DE TEMA */
 .header-right {
     display: flex;
     align-items: center;
@@ -72,7 +72,7 @@ body {
     transform: scale(1.1);
 }
 
-/* Icono por defecto (Luna para modo claro) */
+/* Icono por defecto */
 .theme-btn::before {
     content: "🌙";
     font-size: 1rem;
@@ -83,7 +83,7 @@ body:has(#dark-toggle:checked) .theme-btn::before {
     content: "☀️";
 }
 
-/* --- HEADER & NAVEGACIÓN --- */
+/* HEADER & NAVEGACIÓN */
 .site-header {
     background-color: var(--bg-color);
     padding: 15px 0;
@@ -118,7 +118,7 @@ body:has(#dark-toggle:checked) .theme-btn::before {
     font-weight: 600;
 }
 
-/* --- HERO SECTION --- */
+/* HERO SECTION */
 .hero-section {
     padding: 50px 0 20px;
     text-align: center;
@@ -142,7 +142,7 @@ body:has(#dark-toggle:checked) .theme-btn::before {
     margin: 20px 0 30px;
 }
 
-/* --- INTRO SECCIÓN DE PROYECTOS --- */
+/* INTRO SECCIÓN DE PROYECTOS */
 .intro-project-section {
     text-align: center;
     margin-bottom: 30px;
@@ -151,7 +151,7 @@ body:has(#dark-toggle:checked) .theme-btn::before {
     max-width: 800px;
 }
 
-/* --- GRILLAS (USADAS EN HOME Y PROYECTOS) --- */
+/* GRILLAS */
 .main-content-grid, .projects-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -218,7 +218,7 @@ body:has(#dark-toggle:checked) .theme-btn::before {
     color: var(--muted-color);
 }
 
-/* --- FOOTER --- */
+/* FOOTER */
 .site-footer {
     text-align: center;
     padding: 25px 0;
@@ -229,7 +229,6 @@ body:has(#dark-toggle:checked) .theme-btn::before {
     transition: background-color 0.3s ease;
 }
 
-/* --- ESTILOS ESPECÍFICOS PARA LA GRILLA DE ARTÍCULOS --- */
 .articles-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -243,9 +242,8 @@ body:has(#dark-toggle:checked) .theme-btn::before {
     font-size: 0.85rem;
 }
 
-/* --- ESTILOS PARA LA PÁGINA DE CONTACTO --- */
 .contact-container {
-    max-width: 650px; /* Centrado y ancho óptimo para lectura */
+    max-width: 650px;
     margin-bottom: 50px;
 }
 
@@ -315,7 +313,7 @@ body:has(#dark-toggle:checked) .theme-btn::before {
     transform: translateY(0);
 }
 
-/* Responsivo para artículos en tablets y laptops */
+/* Responsivo */
 @media (min-width: 768px) {
     .articles-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -328,7 +326,6 @@ body:has(#dark-toggle:checked) .theme-btn::before {
     }
 }
 
-/* --- MEDIA QUERIES RESPONSIVAS --- */
 @media (min-width: 600px) {
     .header-container {
         flex-direction: row;
@@ -348,6 +345,6 @@ body:has(#dark-toggle:checked) .theme-btn::before {
 
 @media (min-width: 1024px) {
     .projects-grid {
-        grid-template-columns: repeat(3, 1fr); /* Las 3 tarjetas de Mojang en una linda fila de 3 columnas en pantallas grandes */
+        grid-template-columns: repeat(3, 1fr);
     }
 }
